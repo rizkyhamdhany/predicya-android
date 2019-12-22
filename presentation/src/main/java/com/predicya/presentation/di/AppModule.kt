@@ -19,16 +19,23 @@ import org.koin.android.ext.koin.androidApplication
 import retrofit2.Retrofit
 
 val mRepositoryModules = module {
-    single(name = "remote") { NewsRemoteImpl(api = get(API))}
+    single(name = "remote") { NewsRemoteImpl(api = get(API)) }
     single(name = "local") {
-        NewsCacheImpl(database = get(DATABASE), entityToDataMapper = NewsEntityDataMapper(),
-                dataToEntityMapper = NewsDataEntityMapper())
+        NewsCacheImpl(
+            database = get(DATABASE), entityToDataMapper = NewsEntityDataMapper(),
+            dataToEntityMapper = NewsDataEntityMapper()
+        )
     }
     single { NewsRepositoryImpl(remote = get("remote"), cache = get("local")) as NewsRepository }
 }
 
 val mUseCaseModules = module {
-    factory(name = "getNewsUseCase") { GetNewsUseCase(transformer = AsyncFlowableTransformer(), repositories = get()) }
+    factory(name = "getNewsUseCase") {
+        GetNewsUseCase(
+            transformer = AsyncFlowableTransformer(),
+            repositories = get()
+        )
+    }
 }
 
 val mNetworkModules = module {
@@ -37,11 +44,19 @@ val mNetworkModules = module {
             BASE_URL
         )
     }
-    single(name = API) { (get(RETROFIT_INSTANCE) as Retrofit).create(RemoteNewsApi::class.java) }
+    single(name = API) {
+        (get(RETROFIT_INSTANCE) as Retrofit).create(RemoteNewsApi::class.java)
+    }
 }
 
 val mLocalModules = module {
-    single(name = DATABASE) { Room.databaseBuilder(androidApplication(), NewsDatabase::class.java, "news_articles").build() }
+    single(name = DATABASE) {
+        Room.databaseBuilder(
+            androidApplication(),
+            NewsDatabase::class.java,
+            "news_articles"
+        ).build()
+    }
 }
 
 val mViewModels = module {
