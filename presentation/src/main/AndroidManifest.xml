@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.predictya.android">
+    package="com.predicya.android">
 
     <application
-        android:name="com.predictya.presentation.App"
+        android:name="com.predicya.presentation.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
         <activity
-            android:name="com.predictya.presentation.auth.LoginActivity"
+            android:name="com.predicya.presentation.auth.LoginActivity"
             android:theme="@style/AppThemeNoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,17 +19,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.predictya.presentation.main.HomeActivity"
+            android:name="com.predicya.presentation.main.HomeActivity"
             android:theme="@style/AppThemeNoActionBar"></activity>
         <activity
-            android:name="com.predictya.presentation.news.NewsActivity"
+            android:name="com.predicya.presentation.news.NewsActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.predictya.presentation.medcheck.InputPasienActivity"
+            android:name="com.predicya.presentation.medcheck.InputPasienActivity"
             android:theme="@style/AppThemeNoActionBar">
         </activity>
         <activity
-            android:name="com.predictya.presentation.medcheck.MedcheckActivity"
+            android:name="com.predicya.presentation.medcheck.MedcheckActivity"
             android:theme="@style/AppThemeNoActionBar">
         </activity>
     </application>

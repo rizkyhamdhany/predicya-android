@@ -1,14 +1,14 @@
 <resources>
-    <string name="app_name">Predictya</string>
+    <string name="app_name">Predicya</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Perdictya</string>
-    <string name="nav_header_subtitle">unit@predictya.id</string>
+    <string name="nav_header_title">Perdicya</string>
+    <string name="nav_header_subtitle">unit@predicya.id</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Predictya</string>
+    <string name="menu_home">Predicya</string>
     <string name="menu_setup">Setup</string>
     <string name="menu_contact">Contact</string>
     <string name="menu_logout">Logout</string>
