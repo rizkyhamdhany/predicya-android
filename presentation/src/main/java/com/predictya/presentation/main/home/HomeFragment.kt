@@ -1,14 +1,15 @@
 package com.predictya.presentation.main.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.predictya.android.R
+import com.predictya.presentation.medcheck.InputPasienActivity
+import kotlinx.android.synthetic.main.fragment_home.view.perform_test_container
 
 class HomeFragment : Fragment() {
 
@@ -26,6 +27,10 @@ class HomeFragment : Fragment() {
 //        homeViewModel.text.observe(this, Observer {
 //            textView.text = it
 //        })
+        root.perform_test_container.setOnClickListener {
+            val i = Intent(context, InputPasienActivity::class.java)
+            startActivity(i)
+        }
         return root
     }
 }

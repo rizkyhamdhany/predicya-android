@@ -11,6 +11,7 @@
         android:orientation="horizontal"
         android:padding="25dp">
         <LinearLayout
+            android:id="@+id/perform_test_container"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"

@@ -1,9 +1,11 @@
 package com.predictya.presentation.medcheck
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import com.predictya.android.R
+import kotlinx.android.synthetic.main.activity_input_pasien.input_pasien_btn
 
 
 class InputPasienActivity : AppCompatActivity() {
@@ -15,5 +17,10 @@ class InputPasienActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
+        input_pasien_btn.setOnClickListener {
+            val i = Intent(this, MedcheckActivity::class.java)
+            startActivity(i)
+            finish()
+        }
     }
 }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import com.predictya.android.R
+import kotlinx.android.synthetic.main.activity_medcheck.finish_btn
 
 class MedcheckActivity : AppCompatActivity() {
 
@@ -14,5 +15,8 @@ class MedcheckActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
+        finish_btn.setOnClickListener {
+            finish()
+        }
     }
 }

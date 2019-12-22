@@ -10,14 +10,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
         <activity
+            android:name="com.predictya.presentation.auth.LoginActivity"
+            android:theme="@style/AppThemeNoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.predictya.presentation.main.HomeActivity"
             android:theme="@style/AppThemeNoActionBar"></activity>
         <activity
             android:name="com.predictya.presentation.news.NewsActivity"
             android:theme="@style/AppTheme" />
-        <activity
-            android:name="com.predictya.presentation.auth.LoginActivity"
-            android:theme="@style/AppThemeNoActionBar" />
         <activity
             android:name="com.predictya.presentation.medcheck.InputPasienActivity"
             android:theme="@style/AppThemeNoActionBar">
@@ -25,11 +31,6 @@
         <activity
             android:name="com.predictya.presentation.medcheck.MedcheckActivity"
             android:theme="@style/AppThemeNoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
